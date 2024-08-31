@@ -12,7 +12,7 @@
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
-    "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
+  "sharedGlobals": []
   },
   "nxCloudAccessToken": "YTg1ODA2MzUtOGQ3Yy00NTBkLWEzMDAtZDA3MzE2NDQzMjUxfHJlYWQtd3JpdGU=",
   "plugins": [
@@ -74,5 +74,9 @@
     "@nx/react": {
       "library": {}
     }
-  }
+  },
+  "cli": {
+    "packageManager": "pnpm"
+  },
+  "packageManager": "pnpm"
 }
