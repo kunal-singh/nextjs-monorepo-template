@@ -1,82 +1,92 @@
-# NextjsShadcnNxTemplate
+# Next.js Starter Template
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+This is a comprehensive starter template for Next.js projects, designed to provide a robust foundation for scalable and maintainable web applications. It leverages modern tools and best practices to streamline development and enhance code quality.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+## Features
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/next?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+- **Nx Monorepo**: Organized as a monorepo for better code sharing and project management.
+- **Shadcn UI Library**: Integrated as an Nx library for consistent and customizable UI components.
+- **Vite Bundler**: Utilizes Vite for fast builds and hot module replacement.
+- **Strict ESLint Rules**: Implements opinionated, strict ESLint rules for code quality.
+- **Tailwind CSS**: Employs Tailwind for utility-first styling.
+- **Prettier**: Uses Prettier in conjunction with ESLint for consistent code formatting.
+- **Husky and lint-staged**: Implements Git hooks for pre-commit linting and formatting.
+- **pnpm**: Utilizes pnpm as the package manager for efficient dependency management.
 
-## Finish your CI setup
+## Key Dependencies
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/XgZHGfqJrh)
+| Dependency | Version |
+|------------|---------|
+| Next.js    | 14.2.3  |
+| React      | 18.3.1  |
+| TypeScript | ~5.5.2  |
+| Nx         | 19.6.4  |
+| Vite       | ^5.0.0  |
+| ESLint     | ~8.57.0 |
+| Tailwind CSS | 3.4.3 |
+| pnpm       | >=9.4.0 |
+| Node.js    | >=18.17.0 |
+
+## Getting Started
+
+1. **Clone the repository**
+
+   ```bash
+   git clone [your-repo-url]
+   cd [your-repo-name]
+   ```
+
+2. **Install dependencies**
+
+   This project uses pnpm. If you don't have it installed, you can install it globally with npm:
+
+   ```bash
+   npm install -g pnpm
+   ```
+
+   Then install the project dependencies:
+
+   ```bash
+   pnpm install
+   ```
+
+3. **Run the development server**
+
+   ```bash
+   pnpm nx serve [your-app-name]
+   ```
+
+   Replace `[your-app-name]` with the name of your Next.js application within the Nx workspace.
+
+4. **Build for production**
+
+   ```bash
+   pnpm nx build [your-app-name]
+   ```
+
+## Project Structure
 
 
-## Run tasks
 
-To run the dev server for your app, use:
+## Development Workflow
 
-```sh
-npx nx dev web
-```
+- **Linting**: Run `pnpm nx lint [your-app-name]` to lint your code.
+- **Formatting**: Run `pnpm nx format:write [your-app-name]` to format your code.
+- **Testing**: Run `pnpm nx test [your-app-name]` to run tests.
 
-To create a production bundle:
+Git hooks are set up with Husky and lint-staged to run linting and formatting checks before each commit.
 
-```sh
-npx nx build web
-```
+## Customization
 
-To see all available targets to run for a project, run:
+- **ESLint**: Modify `.eslintrc.json` to adjust linting rules.
+- **Prettier**: Adjust `.prettierrc` for formatting preferences.
+- **Tailwind**: Customize `tailwind.config.js` for styling adjustments.
+- **Shadcn UI**: Modify components in the Shadcn library for UI customization.
 
-```sh
-npx nx show project web
-```
-        
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-Use the plugin's generator to create new projects.
-
-To generate a new application, use:
-
-```sh
-npx nx g @nx/next:app demo
-```
-
-To generate a new library, use:
-
-```sh
-npx nx g @nx/react:lib mylib
-```
-
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
-
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## Contributing
 
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
-## Install Nx Console
+## License
 
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/nx-api/next?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
