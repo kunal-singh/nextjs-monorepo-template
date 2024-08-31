@@ -6,6 +6,8 @@ export default function Index() {
    *
    * Note: The corresponding styles are in the ./index.scss file.
    */
+  const iii:any="hello";
+
   return (
     <div>
       <Button>hello</Button>
