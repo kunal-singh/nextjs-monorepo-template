@@ -1,5 +1,4 @@
 import { Button } from '@web/ui-kit/ui';
-import styles from './page.module.scss';
 
 export default function Index() {
   /*
