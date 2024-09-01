@@ -12,7 +12,7 @@
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s"
     ],
-  "sharedGlobals": []
+    "sharedGlobals": []
   },
   "nxCloudAccessToken": "YTg1ODA2MzUtOGQ3Yy00NTBkLWEzMDAtZDA3MzE2NDQzMjUxfHJlYWQtd3JpdGU=",
   "plugins": [
