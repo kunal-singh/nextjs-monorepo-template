@@ -25,15 +25,15 @@ This is a comprehensive starter template for Next.js projects, designed to provi
 | ESLint     | ~8.57.0 |
 | Tailwind CSS | 3.4.3 |
 | pnpm       | >=9.4.0 |
-| Node.js    | >=18.17.0 |
+| Node.js    | >=18.18.0 |
 
 ## Getting Started
 
 1. **Clone the repository**
 
    ```bash
-   git clone [your-repo-url]
-   cd [your-repo-name]
+   git clone git@github.com:kunal-singh/nextjs-shadcn-nx-template.git
+   cd nextjs-shadcn-nx-template
    ```
 
 2. **Install dependencies**
@@ -53,15 +53,13 @@ This is a comprehensive starter template for Next.js projects, designed to provi
 3. **Run the development server**
 
    ```bash
-   pnpm nx serve [your-app-name]
+   pnpm nx run web:dev
    ```
-
-   Replace `[your-app-name]` with the name of your Next.js application within the Nx workspace.
 
 4. **Build for production**
 
    ```bash
-   pnpm nx build [your-app-name]
+   pnpm nx run web:build --prod
    ```
 
 ## Project Structure
@@ -70,9 +68,9 @@ This is a comprehensive starter template for Next.js projects, designed to provi
 
 ## Development Workflow
 
-- **Linting**: Run `pnpm nx lint [your-app-name]` to lint your code.
-- **Formatting**: Run `pnpm nx format:write [your-app-name]` to format your code.
-- **Testing**: Run `pnpm nx test [your-app-name]` to run tests.
+- **Linting**: Run `pnpm nx run-many --target=lint` to lint your code.
+- **Formatting**: Run `pnpm nx run-many --target=format` to format your code.
+- **Testing**: Run `pnpm nx run-many --target=test` to run tests.
 
 Git hooks are set up with Husky and lint-staged to run linting and formatting checks before each commit.
 
@@ -80,7 +78,7 @@ Git hooks are set up with Husky and lint-staged to run linting and formatting ch
 
 - **ESLint**: Modify `.eslintrc.json` to adjust linting rules.
 - **Prettier**: Adjust `.prettierrc` for formatting preferences.
-- **Tailwind**: Customize `tailwind.config.js` for styling adjustments.
+- **Tailwind**: Customize `libs/ui-kit/util/src/tailwind/tailwind.config.js` for styling adjustments.
 - **Shadcn UI**: Modify components in the Shadcn library for UI customization.
 
 ## Contributing
