@@ -80,8 +80,8 @@ function Index() {
           </Table>
           <div className="mt-4">
             <p className="text-sm text-gray-500">
-              For more details, including getting started guide, project
-              structure, and customization options, please refer to the{' '}
+              For more details, including getting started guide, please refer to
+              the{' '}
               <a
                 className="text-blue-500 hover:underline"
                 href="https://github.com/kunal-singh/nextjs-shadcn-nx-template"
