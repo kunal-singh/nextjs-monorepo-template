@@ -1,4 +1,6 @@
+// eslint-disable-next-line spaced-comment
 /// <reference types="next" />
+// eslint-disable-next-line spaced-comment
 /// <reference types="next/image-types/global" />
 
 // NOTE: This file should not be edited

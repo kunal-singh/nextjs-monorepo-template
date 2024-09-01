@@ -1,11 +1,18 @@
 {
+  "root": true,
   "extends": [
-    "../../.eslintrc.json",
+    "../../.eslintrc.next.json",
     "plugin:@nx/react-typescript",
     "next",
     "next/core-web-vitals"
   ],
   "ignorePatterns": ["!**/*", ".next/**/*"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
@@ -19,7 +26,9 @@
     },
     {
       "files": ["*.js", "*.jsx"],
-      "rules": {}
+      "rules": {
+        "@typescript-eslint/prefer-optional-chain": "off"
+      }
     },
     {
       "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],

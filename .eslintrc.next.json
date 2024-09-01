@@ -2,7 +2,7 @@
   "root": true,
   "ignorePatterns": ["**/*"],
   "plugins": ["@nx","react", "@typescript-eslint", "prettier", "simple-import-sort"],
-  "extends": ["airbnb", "airbnb-typescript", "airbnb/hooks", "plugin:@typescript-eslint/recommended", "plugin:@typescript-eslint/recommended-requiring-type-checking"],
+  "extends": ["plugin:@typescript-eslint/recommended", "plugin:@typescript-eslint/recommended-requiring-type-checking"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -131,12 +131,7 @@
           "error",
           {
             "groups": [
-              // Add internal packages showing on top, You can add "react-hook-form", "react-query" etc.
               ["^@nx", "^react", "^\\w"],
-              // npm packages
-              // Anything that starts with a letter (or digit or underscore), or `@` followed by a letter.
-              // ["^\\w"],
-              // Internal packages.
               ["^@store(/.*|$)"],
               ["^@components(/.*|$)"],
               ["^@ui(/.*|$)"],
@@ -150,13 +145,9 @@
               ["^@hooks(/.*|$)"],
               ["^@providers(/.*|$)"],
               ["^@services(/.*|$)"],
-              // Side effect imports.
               ["^\\u0000"],
-              // Parent imports. Put `..` last.
               ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-              // Other relative imports. Put same-folder imports and `.` last.
               ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-              // Style imports.
               ["^.+\\.?(css)$"]
             ]
           }

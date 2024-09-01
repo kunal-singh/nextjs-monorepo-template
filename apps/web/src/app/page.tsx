@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from 'react';
+'use client';
+
+import { useEffect, useState } from 'react';
 
 import { Button } from '@web/ui-kit/ui';
 
-interface IProps {
-  showExtra?: boolean;
-}
-
-function Index(props: IProps) {
+function Index() {
   const [count, setCount] = useState(0);
-  const { showExtra } = props;
 
   useEffect(() => {
     // console.log("Component mounted");
@@ -29,7 +26,6 @@ function Index(props: IProps) {
       <p>Count: {count}</p>
       <button onClick={handleClick}>Increment</button>
       <Button>Button</Button>
-      {showExtra && <p>Extra content</p>}
     </div>
   );
 }

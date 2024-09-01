@@ -1,7 +1,7 @@
 // libs/ui-kit/util/src/tailwind/tailwind.config.js
 
+// eslint-disable-next-line @typescript-eslint/unbound-method
 const { join } = require('path');
-
 const TailwindAnimate = require('tailwindcss-animate');
 
 module.exports = {
