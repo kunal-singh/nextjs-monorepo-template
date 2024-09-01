@@ -1,16 +1,37 @@
+import React, { useEffect, useState } from 'react';
+
 import { Button } from '@web/ui-kit/ui';
 
-export default function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.scss file.
-   */
-  const iii:any="hello";
+interface IProps {
+  showExtra?: boolean;
+}
+
+function Index(props: IProps) {
+  const [count, setCount] = useState(0);
+  const { showExtra } = props;
+
+  useEffect(() => {
+    // console.log("Component mounted");
+  });
+
+  const handleClick = (e: React.MouseEvent) => {
+    setCount(count + 1);
+    // console.log(e);
+  };
+
+  if (count > 5) {
+    return <div>Count is too high!</div>;
+  }
 
   return (
     <div>
-      <Button>hello</Button>
+      <h1>Badly Formatted Component</h1>
+      <p>Count: {count}</p>
+      <button onClick={handleClick}>Increment</button>
+      <Button>Button</Button>
+      {showExtra && <p>Extra content</p>}
     </div>
   );
 }
+
+export default Index;
