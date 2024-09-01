@@ -1,6 +1,6 @@
-# Next.js Starter Template
+# Next.js+Nx Starter Template
 
-This is a comprehensive starter template for Next.js projects, designed to provide a robust foundation for scalable and maintainable web applications. It leverages modern tools and best practices to streamline development and enhance code quality.
+This is a comprehensive starter template for Next.js projects powered by Nx, designed to provide a robust foundation for scalable and maintainable web applications.
 
 ## Features
 
