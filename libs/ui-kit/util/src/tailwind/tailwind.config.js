@@ -1,13 +1,14 @@
-// eslint-disable-next-line @typescript-eslint/unbound-method
-const { join } = require('path');
 const TailwindAnimate = require('tailwindcss-animate');
 
 module.exports = {
   content: [
-    // relative path by consumer app
-    './{apps,pages,components}/**/*.{js,jsx,ts,tsx}',
-    // path to ui-kit components (relative to current dir)
-    join(__dirname, '../../../ui/**/*.{js,jsx,ts,tsx}'),
+    // Paths for the Next.js app
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    // Path to ui-kit components (relative to the root of the project)
+    '../../libs/ui-kit/ui/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     container: {

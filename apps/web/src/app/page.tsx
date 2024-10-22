@@ -1,5 +1,7 @@
 'use client';
 
+import './global.css';
+
 import { Badge } from '@web/ui-kit/ui/lib/ui/badge';
 import {
   Card,
@@ -42,64 +44,61 @@ function Index() {
   ];
 
   return (
-    <div className="space-y-6 p-6 max-w-4xl mx-auto">
-      <Card>
+    <div className="container mx-auto py-8">
+      <Card className="shadow-lg">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold">
+          <CardTitle className="text-3xl font-bold">
             Next.js+Nx Starter Template
           </CardTitle>
-          <CardDescription>
+          <CardDescription className="text-lg">
             A comprehensive starter template for Next.js projects powered by Nx,
             designed to provide a robust foundation for scalable and
             maintainable web applications.
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <h3 className="text-lg font-semibold mb-2">Features</h3>
-          <div className="flex flex-wrap -m-1 mb-4">
-            {features.map((feature, index) => (
-              <div className="p-1" key={index}>
-                <Badge
-                  className="text-xs whitespace-nowrap"
-                  variant="secondary"
-                >
+        <CardContent className="space-y-6">
+          <section>
+            <h3 className="text-xl font-semibold mb-3">Features</h3>
+            <div className="flex flex-wrap gap-2">
+              {features.map((feature, index) => (
+                <Badge key={index} variant="secondary">
                   {feature}
                 </Badge>
-              </div>
-            ))}
-          </div>
-          <h3 className="text-lg font-semibold mb-2">Key Dependencies</h3>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="w-1/2">Dependency</TableHead>
-                <TableHead>Version</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {dependencies.map((dep, index) => (
-                <TableRow key={index}>
-                  <TableCell className="font-medium">{dep.name}</TableCell>
-                  <TableCell>{dep.version}</TableCell>
-                </TableRow>
               ))}
-            </TableBody>
-          </Table>
-          <div className="mt-4">
-            <p className="text-sm text-gray-500">
-              For more details, including getting started guide, please refer to
-              the{' '}
-              <a
-                className="text-blue-500 hover:underline"
-                href="https://github.com/kunal-singh/nextjs-shadcn-nx-template"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                GitHub repository README
-              </a>
-              .
-            </p>
-          </div>
+            </div>
+          </section>
+          <section>
+            <h3 className="text-xl font-semibold mb-3">Key Dependencies</h3>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-1/2">Dependency</TableHead>
+                  <TableHead>Version</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {dependencies.map((dep, index) => (
+                  <TableRow key={index}>
+                    <TableCell className="font-medium">{dep.name}</TableCell>
+                    <TableCell>{dep.version}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </section>
+          <footer className="text-sm text-gray-500">
+            For more details, including getting started guide, please refer to
+            the{' '}
+            <a
+              className="text-blue-500 hover:underline"
+              href="https://github.com/kunal-singh/nextjs-shadcn-nx-template"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              GitHub repository README
+            </a>
+            .
+          </footer>
         </CardContent>
       </Card>
     </div>
