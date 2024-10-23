@@ -81,10 +81,8 @@ Git hooks are set up with Husky and lint-staged to run linting and formatting ch
 - **Tailwind**: Customize `libs/ui-kit/util/src/tailwind/tailwind.config.js` for styling adjustments.
 - **Shadcn UI**: Modify components in the Shadcn library for UI customization.
 
-## Contributing
+## Roadmap
 
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- [ ] Explore lefthook for git hooks to replace husky and lint-staged
+- [ ] Explore stylistic eslint rules to replace scattered eslint rules
+- [ ] Add Storybook for testing UI components in isolation
